@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>StenSaksPapir</title>
-</head>
-<body>
-    <h1>Halløj</h1>
-    
-</body>
+    <script src="ssp.js"></script>
+  </head>
+  <body>
+    <h1>Halløj med dig</h1>
+
+    <form>
+      <select name="ditvalg" id="ditvalg">
+        <option value="Sten">Sten</option>
+        <option value="Saks">Saks</option>
+        <option value="Papir">Papir</option>
+      </select>
+
+      <input type="button" value="Generate" onclick="generateHand()" />
+    </form>
+
+    <h2 id="hand">Loading ...</h2>
+
+    <h3 id="result"></h3>
+  </body>
 </html>
