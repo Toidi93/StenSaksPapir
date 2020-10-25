@@ -1,3 +1,6 @@
+let winCounter = 0;
+let loseCounter = 0;
+
 const generateNumber = () => {
   const val = Math.random() * 3;
   return Math.floor(val);
@@ -18,10 +21,18 @@ const generateHand = () => {
   const resultat = hasUserWon(pchand, userHand);
   if (resultat === null) {
     document.getElementById("result").innerText = "Tie";
+    document.getElementById("result").style.color = "black";
   } else if (resultat) {
     document.getElementById("result").innerText = "WON";
+    document.getElementById("result").style.color = "green";
+    winCounter += 1;
+    document.getElementById("x").innerText =
+      "Wins: " + winCounter.toString() + "<3";
   } else {
     document.getElementById("result").innerText = "Lose";
+    document.getElementById("result").style.color = "red";
+    loseCounter += 1;
+    document.getElementById("y").innerText = "Loses: " + loseCounter.toString();
   }
 };
 
